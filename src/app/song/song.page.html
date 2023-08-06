@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Estudiante</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="editForm" (ngSubmit)="saveForm()">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input
+          formControlName="artist_name"
+          type="text"
+          required
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Carrera</ion-label>
+        <ion-input formControlName="song_name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cédula</ion-label>
+        <ion-input formControlName="cedula" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Año</ion-label>
+        <ion-select formControlName="year" placeholder="Seleccione su año">
+          <ion-select-option value="1">1 Año</ion-select-option>
+          <ion-select-option value="2">2 Año</ion-select-option>
+          <ion-select-option value="3">3 Año</ion-select-option>
+          <ion-select-option value="4">4 Año</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">
+            Actualizar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
